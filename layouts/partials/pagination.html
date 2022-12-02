@@ -13,7 +13,7 @@
 {{- $currentNode := .currentnode -}}
 {{- $menu_exclusion := .menu_exclusion -}}
 
-{{- if hasPrefix $currentNode.Permalink .menu.URL -}}
+{{- if hasPrefix $currentNode.Permalink .menu.Permalink -}}
   {{- $currentNode.Scratch.Set "NextPageOK" "OK" -}}
   {{- if .menu.IsHome -}}
     {{- $currentNode.Scratch.Set "prevPage" "" -}}
